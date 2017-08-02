@@ -3,6 +3,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {minZoom :10, maxZoom : 1
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+
 let greenIcon = L.icon({
     iconUrl: 'img/leaf-green.png',
     shadowUrl: 'img/leaf-shadow.png',
@@ -37,24 +38,25 @@ let redIcon = L.icon({
 });
 
 var markerTab = [
-        {lat: -20.87269, lng: 55.44889, img: greenIcon, popup: 'Salut'},
-        {lat: -20.8966, lng: 55.44439, img: greenIcon, popup: 'Meuh!'},
-        {lat: -20.93405, lng: 55.47208, img: greenIcon, popup: 'Salut'},
-        {lat: -20.92877, lng: 55.49424, img: greenIcon, popup: 'Coucou'},
-        {lat: -20.92124, lng: 55.43885, img: greenIcon, popup: 'Salut'},
-        {lat: -20.89474, lng: 55.46169, img: greenIcon,popup: 'Meuh!'},
-        {lat: -20.89065, lng: 55.45505, img: orangeIcon, popup: 'Salut'},
-        {lat: -20.88872, lng: 55.46566, img: orangeIcon, popup: 'Salut'},
-        {lat: -20.90129, lng: 55.4084, img: orangeIcon, popup: 'Salut'},
-        {lat: -20.8915, lng: 55.41759, img: orangeIcon, popup: 'Coucou'},
-        {lat: -20.90784, lng: 55.40092, img: orangeIcon, popup: 'Salut'},
-        {lat: -20.90589, lng: 55.46793, img: orangeIcon, popup: 'Salut'},
-        {lat: -20.90432, lng: 55.45546, img: redIcon, popup: 'Salut'},
-        {lat: -20.92811, lng: 55.42919, img: redIcon, popup: 'Salut'},
-        {lat: -20.88537, lng: 55.44288, img: redIcon, popup: 'Coucou'},
-        {lat: -20.89033, lng: 55.45281, img: redIcon, popup: 'Salut'},
-        {lat: -20.92505, lng: 55.45546, img: redIcon, popup: 'Meuh!'},
-        {lat: -20.88275, lng: 55.45913, img: redIcon, popup: 'Salut'},
+        {lat: -20.904788036065646, lng: 55.498504064567086, img: greenIcon, popup: 'Salut'},
+        {lat: - 20.889987, lng: 55.500152, img: greenIcon, popup: 'Meuh!'},
+        {lat: -20.873431, lng: 55.452629, img: greenIcon, popup: 'Salut'},
+        {lat: -20.948746, lng: 55.281660, img: greenIcon, popup: 'Coucou'},
+        {lat: -20.895015, lng:  55.497857, img: greenIcon, popup: 'Salut'},
+        {lat: -21.326289, lng: 55.608400, img: greenIcon,popup: 'Meuh!'},
+        {lat: -20.913092, lng: 55.620134, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.908671, lng: 55.605084, img: orangeIcon, popup: 'Salut'},
+        {lat: -21.346450, lng: 55.492311, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.890523, lng: 55.443799, img: orangeIcon, popup: 'Coucou'},
+        {lat: -21.020964, lng: 55.264664, img: orangeIcon, popup: 'Salut'},
+        {lat: -21.342968, lng: 55.494574, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.888212, lng: 55.469084, img: redIcon, popup: 'Salut'},
+        {lat: -21.026939, lng: 55.268634, img: redIcon, popup: 'Salut'},
+        {lat: -20.888738, lng: 55.501599, img: redIcon, popup: 'Coucou'},
+        {lat: -20.931442, lng: 55.298157, img: redIcon, popup: 'Salut'},
+        {lat: -20.907459, lng: 55.503217, img: redIcon, popup: 'Meuh!'},
+        {lat: -20.926038, lng: 55.454804, img: redIcon, popup: 'Salut'},
+        // La suite des données sont aléatoire, ils ne correspondent pas à Sodiac
         {lat: -20.91909, lng: 55.48593, img: redIcon, popup: 'Coucou'},
         {lat: -20.88838, lng: 55.4707, img: redIcon, popup: 'Salut'},
         {lat: -20.89248, lng: 55.49424, img: redIcon, popup: 'Salut'},
