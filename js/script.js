@@ -1,9 +1,28 @@
-var map = L.map('map').setView([-20.877, 55.432], 11);
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {minZoom :10, maxZoom : 14,
+
+// *** Configuration générale de la map : délimitatée à La Réunion
+
+// L'étendue de la map
+let sudOuest = L.latLng(-22.2484,57.1619);
+let nordEst = L.latLng(-20.2751,54.1681);
+let bounds = L.latLngBounds(sudOuest, nordEst);
+
+// Les caractéristiques initiales de la map
+let map = new L.Map('map',
+{
+    center: [-21.1011, 55.532],
+    maxBounds: bounds,
+    minZoom: 9,
+    maxZoom: 16,
+    zoom: 9
+});
+
+//L'affichage de la map : source bibliothèque
+L.tileLayer('https://api.tiles.mapbox.com/v2/dakno.map-xxbpkb1z/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+// *** FIN de configuration générale 
 
-
+// Markers personalisées
 let greenIcon = L.icon({
     iconUrl: 'img/leaf-green.png',
     shadowUrl: 'img/leaf-shadow.png',
@@ -36,6 +55,7 @@ let redIcon = L.icon({
     shadowAnchor: [4, 62],  // the same for the shadow
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
+// FIN de markers personnalisés
 
 var markerTab = [
         {lat: -20.904788036065646, lng: 55.498504064567086, img: greenIcon, popup: 'Salut'},
