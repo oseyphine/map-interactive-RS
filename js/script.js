@@ -37,41 +37,41 @@ let redIcon = L.icon({
 });
 
 var markerTab = [
-        {lat: -20.87269, lng: 55.44889, img: greenIcon},
-        {lat: -20.8966, lng: 55.44439, img: greenIcon},
-        {lat: -20.93405, lng: 55.47208, img: greenIcon},
-        {lat: -20.92877, lng: 55.49424, img: greenIcon},
-        {lat: -20.92124, lng: 55.43885, img: greenIcon},
-        {lat: -20.89474, lng: 55.46169, img: greenIcon},
-        {lat: -20.89065, lng: 55.45505, img: orangeIcon},
-        {lat: -20.88872, lng: 55.46566, img: orangeIcon},
-        {lat: -20.90129, lng: 55.4084, img: orangeIcon},
-        {lat: -20.8915, lng: 55.41759, img: orangeIcon},
-        {lat: -20.90784, lng: 55.40092, img: orangeIcon},
-        {lat: -20.90589, lng: 55.46793, img: orangeIcon},
-        {lat: -20.90432, lng: 55.45546, img: redIcon},
-        {lat: -20.92811, lng: 55.42919, img: redIcon},
-        {lat: -20.88537, lng: 55.44288, img: redIcon},
-        {lat: -20.89033, lng: 55.45281, img: redIcon},
-        {lat: -20.92505, lng: 55.45546, img: redIcon},
-        {lat: -20.88275, lng: 55.45913, img: redIcon},
-        {lat: -20.91909, lng: 55.48593, img: redIcon},
-        {lat: -20.88838, lng: 55.4707, img: redIcon},
-        {lat: -20.89248, lng: 55.49424, img: redIcon},
-        {lat: -20.89277, lng: 55.50117, img: greenIcon},
-        {lat: -20.91576, lng: 55.50533, img: greenIcon},
-        {lat: -20.91068, lng: 55.48316, img: greenIcon},
-        {lat: -20.89058, lng: 55.44923, img: greenIcon},
-        {lat: -20.89488, lng: 55.46516, img: greenIcon},
-        {lat: -20.88779, lng: 55.4642, img: greenIcon},
+        {lat: -20.87269, lng: 55.44889, img: greenIcon, popup: 'Salut'},
+        {lat: -20.8966, lng: 55.44439, img: greenIcon, popup: 'Meuh!'},
+        {lat: -20.93405, lng: 55.47208, img: greenIcon, popup: 'Salut'},
+        {lat: -20.92877, lng: 55.49424, img: greenIcon, popup: 'Coucou'},
+        {lat: -20.92124, lng: 55.43885, img: greenIcon, popup: 'Salut'},
+        {lat: -20.89474, lng: 55.46169, img: greenIcon,popup: 'Meuh!'},
+        {lat: -20.89065, lng: 55.45505, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.88872, lng: 55.46566, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.90129, lng: 55.4084, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.8915, lng: 55.41759, img: orangeIcon, popup: 'Coucou'},
+        {lat: -20.90784, lng: 55.40092, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.90589, lng: 55.46793, img: orangeIcon, popup: 'Salut'},
+        {lat: -20.90432, lng: 55.45546, img: redIcon, popup: 'Salut'},
+        {lat: -20.92811, lng: 55.42919, img: redIcon, popup: 'Salut'},
+        {lat: -20.88537, lng: 55.44288, img: redIcon, popup: 'Coucou'},
+        {lat: -20.89033, lng: 55.45281, img: redIcon, popup: 'Salut'},
+        {lat: -20.92505, lng: 55.45546, img: redIcon, popup: 'Meuh!'},
+        {lat: -20.88275, lng: 55.45913, img: redIcon, popup: 'Salut'},
+        {lat: -20.91909, lng: 55.48593, img: redIcon, popup: 'Coucou'},
+        {lat: -20.88838, lng: 55.4707, img: redIcon, popup: 'Salut'},
+        {lat: -20.89248, lng: 55.49424, img: redIcon, popup: 'Salut'},
+        {lat: -20.89277, lng: 55.50117, img: greenIcon, popup: 'Meuh!'},
+        {lat: -20.91576, lng: 55.50533, img: greenIcon, popup: 'Salut'},
+        {lat: -20.91068, lng: 55.48316, img: greenIcon, popup: 'Coucou'},
+        {lat: -20.89058, lng: 55.44923, img: greenIcon, popup: 'Meuh!'},
+        {lat: -20.89488, lng: 55.46516, img: greenIcon, popup: 'Salut'},
+        {lat: -20.88779, lng: 55.4642, img: greenIcon, popup: 'Meuh!'},
         
       ]
 
 
 // console.log(markerTab[0].lat);
 for(let i=0; i<markerTab.length; i++){
-    console.log(markerTab[i].img);
-    markerTab[i] = L.marker([markerTab[i].lat, markerTab[i].lng], {icon: markerTab[i].img}).addTo(map);
+    // console.log(markerTab[i].img);
+    markerTab[i] = L.marker([markerTab[i].lat, markerTab[i].lng], {icon: markerTab[i].img}).bindPopup(markerTab[i].popup).addTo(map);
     // L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
 
 }
