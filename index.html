@@ -29,61 +29,34 @@
    <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
  <body id="mapClick">
-   <h1>Carte intéractif test</h1>
-      <div class="jumbotron">
-         <div class="container">
+   <h1>La Sodiac au service de La Réunion</h1>
+   <label class="checkbox-inline"><input type="checkbox" class="categorie_Checkbox" checked="true"  id="immobilierE" name="optradio" >Immobilier Entreprise</label>
+   <label class="checkbox-inline"><input type="checkbox" class="categorie_Checkbox" checked="true" id="habitat" name="optradio" >Habitat</label>
+   <label class="checkbox-inline"><input type="checkbox" class="categorie_Checkbox" checked="true" id="amenagement" name="optradio" >Aménagement</label>
+   <label class="checkbox-inline"><input type="checkbox" class="categorie_Checkbox" checked="true" id="ingenierie" name="optradio" >Ingénierie</label>
+   <div class="jumbotron">
+      <div class="container">
          <div class="row">
-            <div class="col-md-6">
-               <ul class="nav nav-tabs">
-            <li class="nav-item" id="habitat">
-               Habitat
-               <input type="radio" name="case1" value="case1" id="case1" >
-            </li>
-            <li class="nav-item" id="amenagement">
-               Amenagement
-               <input type="radio" name="case2" value="case2" id="case2" >
-            </li>
-            <li class="nav-item" id="immobilier">
-               Immobilier Entreprise
-               <input type="radio" name="case3" value="case3" id="case3" >
-            </li>
-            <li class="nav-item" id="ingenierie" >
-            Ingenierie  
-            <input type="radio" name="case4" value="case4" id="case4" >
-            </li>
+<!--             <div class="col-md-6"> -->
 
-            <div class="habitation" >
+<!--                <div class="habitation" >
                   <div id="marquage" class="trait"></div>
                   <h2>LE SODIAC AU <strong>SERVICE DE LA REUNION</strong></h2>
-                     <h3>Le parc <strong>locatif</strong> de sodia constitue :</h3>
-                        <h1 class="chiffre">2384</h1>
-                           <h4>logement</h4>
-                        <p id="cache">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse culpa natus mollitia, ea dolores neque blanditiis 
-                        </p>
-                           <p><button class="btn-success"><a href="http://sodiac.red-samurai.net/habitat">En savoir plus</a></p>
-               </div>      
-
-               <div  class="logement" >
-                  <div id="marquage" class="trait"></div>
-                  <h2 >LE SODIAC AU <strong>SERVICE DE LA REUNION</strong></h2>
-                     <h3>Le parc <strong>habita</strong> de sodia constitue :</h3>
-                        <h1 class="chiffre">1830</h1>
-                           <h4>logement</h4>
-                        <p id="cache">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse culpa natus mollitia, ea dolores neque blanditiis</p>
-                           <p><button class="btn-danger"><a href="http://sodiac.red-samurai.net/habitat">En savoir plus</a></p>
-               </div>      
-            <!--///////////test////////////-->
-
+                  <h3>Le parc <strong>locatif</strong> de sodia constitue :</h3>
+                  <h1 class="chiffre">2384</h1>
+                  <h4>logement</h4>
+                  <p id="cache">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse culpa natus mollitia, ea dolores neque blanditiis 
+                  </p>
+                  <p><button class="btn-success"><a href="http://sodiac.red-samurai.net/habitat">En savoir plus</a></p>
+               </div> --><!-- /.habitation --> 
+            <!--</div>--><!--/.col-md-6--> 
+            <div class="col-md-12">  
+               <div id="map"></div>
+            </div><!--/.col-md-6-->
                
-            </div><!--col-md-6-->
-            <div class="col-md-6">  
-               <div id="map">
-                  
-               </div>
-               
-            </div>
-        </div> 
-      </div><!--jumbotron-->
+         </div><!--/.row-->
+      </div><!--/.container-->
+   </div><!--jumbotron-->
 <!--  <div id="map"></div>
  --><!--  <button type="button">Clique</button>
  -->
