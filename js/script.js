@@ -1,36 +1,46 @@
 // Markers personalisées
 
 let greenIcon = L.icon({
-    iconUrl: 'images/leaf-green.png',
-    // shadowUrl: 'img/leaf-shadow.png',
+    iconUrl: 'images/marker-icon-2x-green.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
 
-    iconSize:     [38, 95], // size of the icon
-    // shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    iconSize: [25, 41],
+    shadowSize: [41, 41],
+    iconAnchor: [12, 41],
     // shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    popupAnchor: [1, -34],
+});
+
+let blueIcon = L.icon({
+    iconUrl: 'images/marker-icon-2x-blue.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    shadowSize: [41, 41],
+    iconAnchor: [12, 41],
+    // shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor: [1, -34],
 });
 
 let orangeIcon = L.icon({
-    iconUrl: 'images/leaf-orange.png',
-    // shadowUrl: 'img/leaf-shadow.png',
+    iconUrl: 'images/marker-icon-2x-orange.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
 
-    iconSize:     [38, 95], // size of the icon
-    // shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    iconSize: [25, 41],
+    shadowSize: [41, 41],
+    iconAnchor: [12, 41],
     // shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    popupAnchor: [1, -34],
 });
 
-let redIcon = L.icon({
-    iconUrl: 'images/marker-icons.png',
-    // shadowUrl: 'img/leaf-shadow.png',
+let greyIcon = L.icon({
+    iconUrl: 'images/marker-icon-2x-grey.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
 
-    iconSize:     [38, 95], // size of the icon
-    // shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    iconSize: [25, 41],
+    shadowSize: [41, 41],
+    iconAnchor: [12, 41],
     // shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    popupAnchor: [1, -34],
 });
 // FIN de markers personnalisés
 
@@ -41,22 +51,22 @@ let dataTab = [
     {type: 'habitat', lat: -20.948746, lng: 55.281660, img: greenIcon, popup : '<img src="images/sodiac3.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
     {type: 'habitat', lat: -20.895015, lng:  55.497857, img: greenIcon, popup : '<img src="images/sodiac4.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
     {type: 'habitat', lat: -21.326289, lng: 55.608400, img: greenIcon, popup : '<img src="images/sodiac5.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
-    {type: 'immobilierE', lat: -20.913092, lng: 55.620134, img: orangeIcon, popup : '<img src="images/sodiac6.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta. <button>Apercu</button>'},
-    {type: 'immobilierE', lat: -20.908671, lng: 55.605084, img: orangeIcon, popup : '<img src="images/sodiac7.jpg" alt=""/></br>Ensembe de bureaux et de commerces dans deux batiments sur une superficie totale de 9 380m2, avec 360 places de parking.<button>Apercu</button>'},
-    {type: 'immobilierE', lat: -21.346450, lng: 55.492311, img: orangeIcon, popup : '<img src="images/sodiac8.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
-    {type: 'immobilierE', lat: -20.890523, lng: 55.443799, img: orangeIcon, popup :'<img src="images/sodiac6.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta. <button>Apercu</button>'},
-    {type: 'immobilierE', lat: -21.020964, lng: 55.264664, img: orangeIcon, popup : '<img src="images/sodiac4.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
-    {type: 'immobilierE', lat: -21.342968, lng: 55.494574, img: orangeIcon, popup : '<img src="images/sodiac2.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<br><button>Apercu</button>'},
-    {type: 'amenagement', lat: -20.888212, lng: 55.469084, img: redIcon, popup :'<img src="images/sodiac7.jpg" alt=""/><br><h5>Cour Kerveguen :</h5></br>Ensembe de bureaux et de commerces dans deux batiments sur une superficie totale de 9 380m2, avec 360 places de parking.<button>Apercu</button>'},
-    {type: 'amenagement', lat: -21.026939, lng: 55.268634, img: redIcon, popup :'<img src="images/sodiac3.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
-    {type: 'amenagement', lat: -20.888738, lng: 55.501599, img: redIcon, popup : '<img src="images/sodiac.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
-    {type: 'amenagement', lat: -20.931442, lng: 55.298157, img: redIcon, popup: '<img src="images/sodiac8.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
-    {type: 'amenagement', lat: -20.907459, lng: 55.503217, img: redIcon, popup:'<img src="images/sodiac2.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<br><button>Apercu</button>'},
-    {type: 'amenagement', lat: -20.926038, lng: 55.454804, img: redIcon, popup : '<img src="images/sodiac3.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
+    {type: 'immobilierE', lat: -20.913092, lng: 55.620134, img: blueIcon, popup : '<img src="images/sodiac6.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta. <button>Apercu</button>'},
+    {type: 'immobilierE', lat: -20.908671, lng: 55.605084, img: blueIcon, popup : '<img src="images/sodiac7.jpg" alt=""/></br>Ensembe de bureaux et de commerces dans deux batiments sur une superficie totale de 9 380m2, avec 360 places de parking.<button>Apercu</button>'},
+    {type: 'immobilierE', lat: -21.346450, lng: 55.492311, img: blueIcon, popup : '<img src="images/sodiac8.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
+    {type: 'immobilierE', lat: -20.890523, lng: 55.443799, img: blueIcon, popup :'<img src="images/sodiac6.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta. <button>Apercu</button>'},
+    {type: 'immobilierE', lat: -21.020964, lng: 55.264664, img: blueIcon, popup : '<img src="images/sodiac4.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
+    {type: 'immobilierE', lat: -21.342968, lng: 55.494574, img: blueIcon, popup : '<img src="images/sodiac2.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<br><button>Apercu</button>'},
+    {type: 'amenagement', lat: -20.888212, lng: 55.469084, img: greyIcon, popup :'<img src="images/sodiac7.jpg" alt=""/><br><h5>Cour Kerveguen :</h5></br>Ensembe de bureaux et de commerces dans deux batiments sur une superficie totale de 9 380m2, avec 360 places de parking.<button>Apercu</button>'},
+    {type: 'amenagement', lat: -21.026939, lng: 55.268634, img: greyIcon, popup :'<img src="images/sodiac3.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
+    {type: 'amenagement', lat: -20.888738, lng: 55.501599, img: greyIcon, popup : '<img src="images/sodiac.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
+    {type: 'amenagement', lat: -20.931442, lng: 55.298157, img: greyIcon, popup: '<img src="images/sodiac8.jpg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
+    {type: 'amenagement', lat: -20.907459, lng: 55.503217, img: greyIcon, popup:'<img src="images/sodiac2.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<br><button>Apercu</button>'},
+    {type: 'amenagement', lat: -20.926038, lng: 55.454804, img: greyIcon, popup : '<img src="images/sodiac3.jpeg" alt=""/><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, tenetur. Molestias nemo sint, beatae quasi corporis unde sapiente ad, et vitae saepe fugit. Delectus, culpa et minus cupiditate voluptate soluta.<button>Apercu</button>'},
     // La suite des données sont aléatoire, ils ne correspondent pas à Sodiac
-    {type: 'amenagement', lat: -20.91909, lng: 55.48593, img: redIcon, popup: 'Coucou'},
-    {type: 'amenagement', lat: -20.88838, lng: 55.4707, img: redIcon, popup: 'Salut'},
-    {type: 'amenagement', lat: -20.89248, lng: 55.49424, img: redIcon, popup: 'Salut'},
+    {type: 'amenagement', lat: -20.91909, lng: 55.48593, img: greyIcon, popup: 'Coucou'},
+    {type: 'amenagement', lat: -20.88838, lng: 55.4707, img: greyIcon, popup: 'Salut'},
+    {type: 'amenagement', lat: -20.89248, lng: 55.49424, img: greyIcon, popup: 'Salut'},
     {type: 'habitat', lat: -20.89277, lng: 55.50117, img: greenIcon, popup: 'Meuh!'},
     {type: 'habitat', lat: -20.91576, lng: 55.50533, img: greenIcon, popup: 'Salut'},
     {type: 'habitat', lat: -20.91068, lng: 55.48316, img: greenIcon, popup: 'Coucou'},
@@ -135,8 +145,9 @@ $(document).ready(function(){
         let longitute = dataTab[i].lng;
         let type = dataTab[i].type;
         let popup = dataTab[i].popup;
+        let markerIcon = dataTab[i].img;
 
-        let markers = L.marker([latitude,longitute],{icon: dataTab[i].img}).bindPopup(popup);
+        let markers = L.marker([latitude,longitute],{icon: markerIcon}).bindPopup(popup);
         Categorie[type].addLayer(markers)
 
         // if(Categorie[type]){
